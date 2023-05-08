@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.gbs'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+//sourceCompatibility = '17'
 
 repositories {
 	maven {
@@ -25,8 +25,16 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.0'
+
+
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	//数据库连接池
+	implementation group: 'com.alibaba', name: 'druid-spring-boot-starter', version: '1.2.17'
+
+	//mybatis plus
+	implementation group: 'com.baomidou', name: 'mybatis-plus', version: '3.5.3.1'
 }
 
 tasks.named('test') {
