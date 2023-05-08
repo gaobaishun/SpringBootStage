@@ -4,5 +4,17 @@ spring:
     url: jdbc:mysql://localhost:3306/test
     password: root
     username: root
+
+  devtools:
+    restart:
+      # 热部署开关，false即不启用热部署
+      enabled: true
+      # 指定热部署的目录
+      additional-paths: src/main/java
+      # 指定目录不更新
+      #exclude: test/**
+
+
 #application:
 #  name: staging
+

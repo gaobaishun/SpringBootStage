@@ -23,6 +23,8 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+	//web依赖 tomcat，dispatchServlet，xml
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.0'
 
@@ -35,6 +37,10 @@ dependencies {
 
 	//mybatis plus
 	implementation group: 'com.baomidou', name: 'mybatis-plus', version: '3.5.3.1'
+
+	//热部署
+	implementation group: 'org.springframework.boot', name: 'spring-boot-devtools'
+
 }
 
 tasks.named('test') {
