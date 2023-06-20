@@ -1,6 +1,6 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.0.5'
+	id 'org.springframework.boot' version '3.1.0'
 	id 'io.spring.dependency-management' version '1.1.0'
 }
 
@@ -24,6 +24,9 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 
+	//因版本而异，当前版本需要引入该依赖才能使用ConfigurationProperties等注解
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
 	//web依赖 tomcat，dispatchServlet，xml
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.0'
@@ -39,7 +42,7 @@ dependencies {
 	implementation group: 'com.baomidou', name: 'mybatis-plus', version: '3.5.3.1'
 
 	//热部署
-	implementation group: 'org.springframework.boot', name: 'spring-boot-devtools'
+//	implementation group: 'org.springframework.boot', name: 'spring-boot-devtools'
 
 }
 
