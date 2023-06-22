@@ -1,0 +1,43 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    password: root
+    username: root
+
+
+#  devtools:
+#    restart:
+#      # 热部署开关，false即不启用热部署
+#      enabled: false
+#      # 指定热部署的目录
+#      additional-paths: src/main/java
+#      # 指定目录不更新
+#      #exclude: test/**
+
+#application:
+#  name: staging
+server:
+  port: 8081
+
+
+
+# 配置对象
+yaml-object:
+  name: gbs${random.uuid}
+  #name: gbs${random.int}
+  age: 22
+  happy: true
+  birth: 1998-08-25
+  email: sss@foxmail.com
+  maps: {k1: v1,k2: v2}
+  #  lists:
+  #    - code
+  #    - music
+  #    - girl
+  lists: [code,music,girl]
+  dog:
+    # 如果yaml-object.name1 不存在则取后面的值
+    name: ${yaml-object.name1:dognameisnull}
+    age: 3
+
