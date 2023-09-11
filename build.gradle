@@ -22,7 +22,7 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+//	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 
 	//因版本而异，当前版本需要引入该依赖才能使用ConfigurationProperties等注解
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'

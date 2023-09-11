@@ -1,0 +1,23 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="printDataPojo" class="com.gbs.staging.test.beanInjectionTest.PrintDataPojo">
+        <property name="name" value="test"/>
+        <property name="sex" value="10"/>
+    </bean>
+
+
+    <!--set方式注入
+           id是注入bean中的名字
+           class 是全限定类名
+           property 是按照set方式注入
+       -->
+    <bean id="xmlBeanInjectionSet" class="com.gbs.staging.test.beanInjectionTest.xml.XmlBeanInjectionSet">
+        <property name="printDataPojoPro" ref="printDataPojo"/>
+    </bean>
+
+    <!--    构造函数注入-->
+    <bean id="xmlBeanInjectionConstruct" class="com.gbs.staging.test.beanInjectionTest.xml.XmlBeanInjectionConstruct">
+        <constructor-arg name="printDataPojoPro" ref="printDataPojo"/>
+    </bean>
+</beans>

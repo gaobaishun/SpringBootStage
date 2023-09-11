@@ -1,9 +1,12 @@
+
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/test
     password: root
     username: root
+  messages:
+    basename: i18n/index
 
 
 #  devtools:
@@ -41,3 +44,10 @@ yaml-object:
     name: ${yaml-object.name1:dognameisnull}
     age: 3
 
+
+
+#查看哪些自动配置生效了哪些没生效
+#Positive matches:表示生效
+#Negative matches: 没生效
+#Unconditional classes: 不满足条件的
+debug: true
