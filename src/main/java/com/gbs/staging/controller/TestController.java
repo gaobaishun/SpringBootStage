@@ -40,7 +40,8 @@ public class TestController {
     @RequestMapping("/hello")
     public String hello(){
 
-        return "hello,world10";
+
+        return "hello,world10ddd";
     }
 
     //国际化
