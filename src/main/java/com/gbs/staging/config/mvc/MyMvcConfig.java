@@ -7,6 +7,7 @@ import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 
@@ -45,6 +46,8 @@ public class MyMvcConfig implements WebMvcConfigurer {
         return new MyLocaleResovler();
     }
 
+
+
     /**
      * 视图跳转
      */
@@ -54,7 +57,10 @@ public class MyMvcConfig implements WebMvcConfigurer {
         registry.addViewController("/jump").setViewName("/ViewControllerJump.html");
         //registry.addViewController("/loginSuccess.html").setViewName("/ViewControllerJump.html");
         registry.addViewController("/index").setViewName("/index.html");
+
     }
+
+
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
