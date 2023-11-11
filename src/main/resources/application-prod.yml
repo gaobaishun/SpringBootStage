@@ -75,7 +75,9 @@ spring:
 #  name: staging
 server:
   port: 8082
-
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
 
 
 # 配置对象

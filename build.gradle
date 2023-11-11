@@ -63,6 +63,10 @@ dependencies {
 	//热部署
 //	implementation group: 'org.springframework.boot', name: 'spring-boot-devtools'
 
+	//swagger
+	implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.2.0'
+	implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-api', version: '2.2.0'
+
 }
 
 tasks.named('test') {
