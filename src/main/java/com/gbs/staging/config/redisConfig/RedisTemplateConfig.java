@@ -33,8 +33,10 @@ public class RedisTemplateConfig {
 
         template.setKeySerializer(stringRedisSerializer);
         template.setHashKeySerializer(stringRedisSerializer);
+
+        //设置value的序列化工具
         template.setValueSerializer(jackson2JsonRedisSerializer);
-        template.setHashValueSerializer(stringRedisSerializer);
+        template.setHashValueSerializer(jackson2JsonRedisSerializer);
         template.afterPropertiesSet();
 
 
