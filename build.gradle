@@ -67,6 +67,10 @@ dependencies {
 	implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.2.0'
 	implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-api', version: '2.2.0'
 
+
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: '3.1.0'
+	//jedis
+	implementation group: 'redis.clients', name: 'jedis', version: '5.0.0'
 }
 
 tasks.named('test') {

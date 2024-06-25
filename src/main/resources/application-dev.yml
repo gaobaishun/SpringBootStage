@@ -64,6 +64,14 @@ spring:
         deny:
   messages:
     basename: i18n/index
+
+    #redis  参考 RedisProperties 注意高版本spring使用的是
+    #lettuce而不是jedis
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+
 #  mvc:
 #    pathmatch:
 #
@@ -125,3 +133,5 @@ logging:
 #整合mybatis
 mybatis:
   mapper-locations: classpath:mybatis/mapper/*.xml
+
+
