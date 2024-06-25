@@ -1,5 +1,6 @@
 package com.gbs.staging.database;
 
+import com.gbs.staging.jedis.factory.JedisConnectionFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,7 +15,8 @@ public class JedisTest {
 
     @BeforeEach
     public void setUp(){
-         jedis=new Jedis("127.0.0.1",6379);
+//         jedis=new Jedis("127.0.0.1",6379);
+        jedis= JedisConnectionFactory.getJedis();
          //密码
          //jedis.auth();
          jedis.select(0);
@@ -28,6 +30,7 @@ public class JedisTest {
         System.out.println("name="+name);
     }
 
+    //释放资源
     @AfterEach
     void tearDown(){
         if(jedis != null){
